@@ -34,6 +34,7 @@
 		2BF5E66E25DAFE0900ACE4C1 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5E66D25DAFE0900ACE4C1 /* DatabaseManager.swift */; };
 		2BF5E67325DAFF3300ACE4C1 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5E67225DAFF3300ACE4C1 /* AuthManager.swift */; };
 		2BF5E67825DAFF8500ACE4C1 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5E67725DAFF8500ACE4C1 /* StorageManager.swift */; };
+		2BF5E69525DB081400ACE4C1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF5E69425DB081400ACE4C1 /* Extensions.swift */; };
 		731C285FA3C21651307F57AA /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF17235EA911BE9AF27050DB /* Pods_Instagram.framework */; };
 		7D70FC766050B32195030BD4 /* Pods_InstagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95B14FCE4EA9275AD466C7FB /* Pods_InstagramTests.framework */; };
 		EEA1B1240B727BCF7404948F /* Pods_Instagram_InstagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C1E7D6D9CE1578CBCB9B5B /* Pods_Instagram_InstagramUITests.framework */; };
@@ -92,6 +93,7 @@
 		2BF5E66D25DAFE0900ACE4C1 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		2BF5E67225DAFF3300ACE4C1 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		2BF5E67725DAFF8500ACE4C1 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		2BF5E69425DB081400ACE4C1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		576042E06FC92760BFF23728 /* Pods-Instagram-InstagramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram-InstagramUITests.release.xcconfig"; path = "Target Support Files/Pods-Instagram-InstagramUITests/Pods-Instagram-InstagramUITests.release.xcconfig"; sourceTree = "<group>"; };
 		95B14FCE4EA9275AD466C7FB /* Pods_InstagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8D51C14D54C7AE1498DFBAD /* Pods-InstagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramTests.debug.xcconfig"; path = "Target Support Files/Pods-InstagramTests/Pods-InstagramTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				2BF5E66D25DAFE0900ACE4C1 /* DatabaseManager.swift */,
 				2BF5E67225DAFF3300ACE4C1 /* AuthManager.swift */,
 				2BF5E67725DAFF8500ACE4C1 /* StorageManager.swift */,
+				2BF5E69425DB081400ACE4C1 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				2BD71CBE25D9B61700E74CD0 /* ExploreViewController.swift in Sources */,
 				2BD71CE025D9B97200E74CD0 /* RegistrationViewController.swift in Sources */,
 				2BB9AC4625D9A5AB006A98EB /* AppDelegate.swift in Sources */,
+				2BF5E69525DB081400ACE4C1 /* Extensions.swift in Sources */,
 				2BD71CF425D9BA0500E74CD0 /* ListViewController.swift in Sources */,
 				2BF5E67325DAFF3300ACE4C1 /* AuthManager.swift in Sources */,
 				2BB9AC4825D9A5AB006A98EB /* SceneDelegate.swift in Sources */,
@@ -736,6 +740,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KB82824ZMA;
 				INFOPLIST_FILE = Instagram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -756,6 +761,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KB82824ZMA;
 				INFOPLIST_FILE = Instagram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
