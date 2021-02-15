@@ -8,22 +8,73 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+  
+  private let usernameEmailField: UITextField = {
+    return UITextField()
+  }()
+  
+  private let passwordField: UITextField = {
+    let field = UITextField()
+    field.isSecureTextEntry = true
+    return field
+  }()
+  
+  private let loginButton: UIButton = {
+    return UIButton()
+  }()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  private let termButton: UIButton = {
+    return UIButton()
+  }()
+  
+  private let privacyButton: UIButton = {
+    return UIButton()
+  }()
+  
+  private let createAccountButton: UIButton = {
+    return UIButton()
+  }()
+  
+  private let headerView: UIView = {
+    return UIView()
+  }()
 
-        // Do any additional setup after loading the view.
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    addSubviews()
+    view.backgroundColor = .systemBackground
+  }
+  
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    // assign frames
+  }
+  
+  private func addSubviews() {
+    view.addSubview(usernameEmailField)
+    view.addSubview(passwordField)
+    view.addSubview(loginButton)
+    view.addSubview(termButton)
+    view.addSubview(privacyButton)
+    view.addSubview(createAccountButton)
+    view.addSubview(headerView)
+  }
+  
+  @objc private func didTapLoginButton() {
+    
+  }
+  
+  @objc private func didTapTermsButton() {
+    
+  }
+  
+  @objc private func didTapPrivacyButton() {
+    
+  }
+  
+  @objc private func didTapCreateAccountButton() {
+    
+  }
 
 }
