@@ -14,6 +14,7 @@ class RegistrationViewController: UIViewController {
   }
   
   // MARK: - UI Elements
+  
   private let usernameField: UITextField = {
     let field = UITextField()
     field.placeholder = "Username..."
@@ -73,6 +74,8 @@ class RegistrationViewController: UIViewController {
     return button
   }()
 
+  // MARK: - UI Functions
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -123,6 +126,8 @@ class RegistrationViewController: UIViewController {
     
   }
   
+  // MARK: - Action Functions
+  
   @objc private func didTapRegister() {
     usernameField.resignFirstResponder()
     emailField.resignFirstResponder()
@@ -148,6 +153,8 @@ class RegistrationViewController: UIViewController {
   }
 
 }
+
+// MARK: - UITextFieldDelegate
 
 extension RegistrationViewController: UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {

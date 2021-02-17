@@ -44,9 +44,5 @@ public class DatabaseManager {
   }
   
   // MARK: - Private
-  
-  private func safeKey() {
-    
-  }
-  
+
 }
