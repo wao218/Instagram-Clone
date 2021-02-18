@@ -102,7 +102,8 @@ final class SettingsViewController: UIViewController {
         }
       }
     }))
-
+    
+    // For iPad presentation of action sheet
     actionSheet.popoverPresentationController?.sourceView = tableView
     actionSheet.popoverPresentationController?.sourceRect = tableView.bounds
     
@@ -133,6 +134,7 @@ final class SettingsViewController: UIViewController {
     let vc = EditProfileViewController()
     vc.title = "Edit Profile"
     let navVC = UINavigationController(rootViewController: vc)
+    navVC.modalPresentationStyle = .fullScreen
     present(navVC, animated: true)
   }
   
