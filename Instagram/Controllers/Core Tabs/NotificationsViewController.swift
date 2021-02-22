@@ -78,6 +78,16 @@ final class NotificationsViewController: UIViewController {
   
   private func fetchNotifications() {
     for x in 0...100 {
+      let user = User(
+        username: "Joe",
+        bio: "",
+        name: (first: "", last: ""),
+        profilePhoto: URL(string: "https://www.google.com")!,
+        birthDate: Date(),
+        gender: .male,
+        counts: UserCount(followers: 100, following: 100, posts: 100),
+        joinDate: Date()
+      )
       let post = UserPost(
         identifier: "",
         postType: .photo,
@@ -87,22 +97,14 @@ final class NotificationsViewController: UIViewController {
         likeCount: [],
         comments: [],
         createdDate: Date(),
-        taggedUsers: []
+        taggedUsers: [],
+        owner: user
       )
 
       let model = UserNotification(
         type: x % 2 == 0 ? .like(post: post) : .follow(state: .not_following),
         text: "Hello World",
-        user: User(
-          username: "Joe",
-          bio: "",
-          name: (first: "", last: ""),
-          profilePhoto: URL(string: "https://www.google.com")!,
-          birthDate: Date(),
-          gender: .male,
-          counts: UserCount(followers: 100, following: 100, posts: 100),
-          joinDate: Date()
-        )
+        user: user
       )
       
       models.append(model)
@@ -146,8 +148,15 @@ extension NotificationsViewController: UITableViewDelegate, UITableViewDataSourc
 
 extension NotificationsViewController: NotificiationLikeEventTableViewCellDelegate {
   func didTapRelatedPostButton(model: UserNotification) {
-    print("Tapped post")
-    // Open the posts
+    switch model.type {
+    case .like(let post):
+      let vc = PostViewController(model: post)
+      vc.title = post.postType.rawValue
+      vc.navigationItem.largeTitleDisplayMode = .never
+      navigationController?.pushViewController(vc, animated: true)
+    case .follow(_):
+      fatalError("Dev Issue: Should never get called")
+    }
   }
 }
 
