@@ -121,7 +121,7 @@ class NotificiationFollowEventTableViewCell: UITableViewCell {
   
   private func configureForFollow() {
     followButton.setTitle("Unfollow", for: .normal)
-    followButton.setTitleColor(.label, for: .normal)
+    followButton.setTitleColor(.white, for: .normal)
     followButton.layer.borderWidth = 1
     followButton.layer.borderColor = UIColor.secondaryLabel.cgColor
     followButton.backgroundColor = .link
